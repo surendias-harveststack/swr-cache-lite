@@ -1,0 +1,77 @@
+{
+  "name": "swr-cache-lite",
+  "version": "0.1.0",
+  "description": "Tiny stale-while-revalidate cache for async functions (Node & serverless).",
+  "keywords": [
+    "cache",
+    "swr",
+    "stale-while-revalidate",
+    "node",
+    "redis"
+  ],
+  "license": "MIT",
+  "author": "Your Name",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surendias/swr-cache-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/surendias/swr-cache-lite/issues"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/surendias"
+    }
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./redis-adapter": {
+      "types": "./dist/redis-adapter.d.ts",
+      "import": "./dist/redis-adapter.js",
+      "require": "./dist/redis-adapter.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "ioredis": "^5 || ^6"
+  },
+  "peerDependenciesMeta": {
+    "ioredis": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "release": "changeset version && npm run build && npm publish --access public",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "husky": "^9.1.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  }
+}
