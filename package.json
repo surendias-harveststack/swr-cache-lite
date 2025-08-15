@@ -10,18 +10,18 @@
     "redis"
   ],
   "license": "MIT",
-  "author": "Your Name",
+  "author": "Suren Dias",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/surendias/swr-cache-lite.git"
+    "url": "git+https://github.com/surendias-harveststack/swr-cache-lite.git"
   },
   "bugs": {
-    "url": "https://github.com/surendias/swr-cache-lite/issues"
+    "url": "https://github.com/surendias-harveststack/swr-cache-lite/issues"
   },
   "funding": [
     {
       "type": "github",
-      "url": "https://github.com/sponsors/surendias"
+      "url": "https://github.com/sponsors/surendias-harveststack"
     }
   ],
   "type": "module",
